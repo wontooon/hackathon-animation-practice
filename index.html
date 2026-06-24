@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hackathon Animation Practice</title>
+  <title>Animation Practice</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="stage">
     <h1>Animation Practice</h1>
-    <p class="subtitle">A tiny starter demo. Click the button to play.</p>
+    <p class="subtitle">一个练习页面：标题、按钮、卡片，加上一点动画。</p>
 
-    <div class="box" id="box"></div>
+    <button class="btn" id="revealBtn">显示卡片</button>
+    <p class="hint" id="hint"></p>
 
-    <button class="btn" id="playBtn">Play animation</button>
+    <section class="cards" id="cards">
+      <article class="card">
+        <h2>CSS 动画</h2>
+        <p>背景渐变缓慢移动，卡片 hover 时轻微上浮。</p>
+      </article>
+      <article class="card">
+        <h2>JS 交互</h2>
+        <p>点击按钮后卡片依次淡入，按钮带 breathing 呼吸效果。</p>
+      </article>
+      <article class="card">
+        <h2>练习目标</h2>
+        <p>熟悉从写代码到 GitHub 发布的完整流程。</p>
+      </article>
+    </section>
   </main>
 
   <script src="script.js"></script>
