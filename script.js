@@ -11,16 +11,16 @@ revealBtn.addEventListener("click", () => {
     cards.forEach((card, i) => {
       setTimeout(() => card.classList.add("reveal"), i * 180);
     });
-    hint.textContent = "卡片出现了！把鼠标移到卡片上看看 hover 上浮效果。";
+    hint.textContent = "艺术家选项";
     hint.classList.add("show");
-    revealBtn.textContent = "隐藏卡片";
+    revealBtn.textContent = "隐藏选项";
     shown = true;
   } else {
     // 再次点击：隐藏卡片
     cards.forEach((card) => card.classList.remove("reveal"));
     hint.classList.remove("show");
     hint.textContent = "";
-    revealBtn.textContent = "显示卡片";
+    revealBtn.textContent = "显示选项";
     shown = false;
   }
 });

@@ -12,10 +12,19 @@ body {
   place-items: center;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   color: #fff;
-  /* 1) CSS animation: 背景渐变缓慢移动 */
-  background: linear-gradient(120deg, #0f1226, #1b2a6b, #5e2a8c, #0f1226);
-  background-size: 300% 300%;
-  animation: gradientMove 18s ease infinite;
+  /* 1) CSS animation: 莫奈印象派风格背景（睡莲 / 水面），用多层径向渐变自绘，缓慢移动 */
+  background-color: #6f8f9e;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(120, 170, 140, .55) 0, transparent 22%),
+    radial-gradient(circle at 70% 25%, rgba(160, 190, 220, .50) 0, transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(210, 170, 200, .45) 0, transparent 24%),
+    radial-gradient(circle at 35% 75%, rgba(120, 160, 180, .55) 0, transparent 26%),
+    radial-gradient(circle at 55% 50%, rgba(235, 215, 170, .35) 0, transparent 20%),
+    radial-gradient(circle at 12% 65%, rgba(180, 150, 190, .40) 0, transparent 18%),
+    radial-gradient(circle at 90% 45%, rgba(110, 150, 130, .45) 0, transparent 20%),
+    linear-gradient(135deg, #5b7e8c, #7fa07e, #9bb0cf, #b58aa8);
+  background-size: 200% 200%;
+  animation: gradientMove 24s ease infinite;
 }
 
 .stage {
@@ -73,12 +82,15 @@ h1 {
 }
 
 .card {
-  background: rgba(255, 255, 255, .08);
-  border: 1px solid rgba(255, 255, 255, .15);
+  /* 青绿玻璃渐变（glassmorphism） */
+  background: linear-gradient(135deg, rgba(64, 224, 190, .28), rgba(20, 130, 120, .20));
+  border: 1px solid rgba(180, 255, 230, .35);
   border-radius: 16px;
   padding: 1.5rem;
   text-align: left;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 60, 50, .25);
   /* 默认隐藏，点击按钮后由 JS 淡入 */
   opacity: 0;
   transform: translateY(16px);
